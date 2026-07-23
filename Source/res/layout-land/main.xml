@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- ВЕРХНЯЯ ПАНЕЛЬ ПУТЕЙ -->
+    <LinearLayout 
+        android:id="@+id/layoutPathHeaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#111111"
+        android:padding="5dp">
+        <TextView android:id="@+id/tvLeftPathHeader"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="#FFFFFF" android:textSize="12sp" android:singleLine="true" android:ellipsize="start"/>
+        <TextView android:id="@+id/tvRightPathHeader"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="#FFFFFF" android:textSize="12sp" android:singleLine="true" android:ellipsize="start" android:gravity="right"/>
+    </LinearLayout>
+
+    <!-- ДВЕ ПАНЕЛИ БОК О БОК (Для альбомного режима) -->
+    <LinearLayout
+        android:id="@+id/layoutLandscapePanels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_above="@+id/layoutProgressBlock"
+        android:layout_below="@id/layoutPathHeaders">
+
+        <!-- Сюда программно вставим левую панель -->
+        <FrameLayout
+            android:id="@+id/containerLeftPanel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#050505"/>
+
+        <!-- Разделительная линия между панелями -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333333"/>
+
+        <!-- Сюда программно вставим правую панель -->
+        <FrameLayout
+            android:id="@+id/containerRightPanel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000000"/>
+    </LinearLayout>
+
+    <!-- БЛОК ПРОГРЕССА -->
+    <LinearLayout android:id="@+id/layoutProgressBlock"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_above="@+id/layoutBottomToolbar"
+        android:visibility="gone" android:padding="4dp">
+        <ProgressBar android:id="@+id/progressBar" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tvStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- НИЖНИЙ ТУЛБАР -->
+    <LinearLayout android:id="@+id/layoutBottomToolbar"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_alignParentBottom="true"
+        android:background="#222222" android:padding="2dp">
+        <Button android:id="@+id/btnTcCopy" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Копировать"/>
+        <Button android:id="@+id/btnTcMove" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Переместить"/>
+        <Button android:id="@+id/btnTcDelete" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Удалить"/>
+    </LinearLayout>
+</RelativeLayout>
+

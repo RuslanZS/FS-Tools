@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FS Tools</string>
+    
+    <!-- Главный экран (MainActivity) -->
+    <string name="title_main">Файловые инструменты TC</string>
+    <string name="btn_source_dir">Выбрать исходную папку (Откуда)</string>
+    <string name="btn_target_dir">Выбрать целевую папку (Куда)</string>
+    <string name="hint_extension">Расширение (например: png, mp3, txt)</string>
+    <string name="btn_copy">Запустить Копирование</string>
+    <string name="btn_move">Запустить Перемещение</string>
+    <string name="btn_delete">Удалить файлы по маске</string>
+    <string name="status_idle">Ожидание действий...</string>
+    <string name="log_initial">Лог программы...</string>
+    
+    <!-- Сообщения и уведомления -->
+    <string name="toast_select_dirs">Выберите исходную и целевую папки!</string>
+    <string name="toast_select_source">Выберите хотя бы одну папку!</string>
+    <string name="toast_success">Операция успешно завершена!</string>
+    <string name="toast_error">Ошибка: %s</string>
+    <string name="dialog_delete_confirm">Вы уверены, что хотите безвозвратно удалить все файлы *.%1$s в папке %2$s и всех её подпапках?</string>
+    
+    <!-- Проводник (FilePickerActivity) -->
+    <string name="path_label">Путь: %s</string>
+    <string name="btn_confirm_dir">Выбрать эту папку</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="folder_up">.. [Вверх]</string>
+</resources>
